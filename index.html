@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="UrbanNest Interiors – Premium Interior Design Studio in Delhi NCR. Award-winning luxury interior design for residential, commercial, modular and villa spaces.">
+<meta name="keywords" content="interior design, luxury interiors, Delhi NCR, home design, office interiors, modular kitchens, villa design, apartment interiors">
+<meta name="author" content="UrbanNest Interiors">
+<meta property="og:title" content="UrbanNest Interiors | Premium Luxury Interior Design Studio">
+<meta property="og:description" content="Transform your space with Delhi NCR's premier luxury interior design studio.">
+<meta property="og:type" content="website">
+<title>UrbanNest Interiors | Premium Luxury Interior Design Studio – Delhi NCR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ─── RESET & ROOT ─────────────────────────────── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --gold:        #c9a84c;
+  --gold-light:  #e8d5a3;
+  --gold-dark:   #9a7a2e;
+  --black:       #0e0e0e;
+  --charcoal:    #1c1c1c;
+  --off-white:   #f7f4ef;
+  --cream:       #ede8df;
+  --warm-gray:   #b5a99a;
+  --text-muted:  #7a7265;
+  --white:       #ffffff;
+  --nav-h:       80px;
+  --radius:      4px;
+  --transition:  0.4s cubic-bezier(0.25,0.8,0.25,1);
+}
+html { scroll-behavior:smooth; overflow-x:hidden; }
+body {
+  font-family:'Jost', sans-serif;
+  background:var(--white);
+  color:var(--charcoal);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+img { display:block; width:100%; object-fit:cover; }
+a  { text-decoration:none; color:inherit; }
+
+/* ─── TYPOGRAPHY ────────────────────────────────── */
+.serif { font-family:'Cormorant Garamond', Georgia, serif; }
+
+/* ─── REUSABLE LAYOUT ───────────────────────────── */
+.container { max-width:1280px; margin:0 auto; padding:0 5%; }
+.section-wrap { padding:100px 0; }
+.section-head { text-align:center; margin-bottom:70px; }
+.section-label {
+  display:inline-block; font-size:11px; font-weight:600;
+  letter-spacing:4px; text-transform:uppercase; color:var(--gold);
+  margin-bottom:18px;
+}
+.section-title {
+  font-family:'Cormorant Garamond', serif;
+  font-size:clamp(36px,5vw,64px); font-weight:700;
+  color:var(--black); line-height:1.15; margin-bottom:22px;
+}
+.section-sub {
+  font-size:16px; color:var(--text-muted);
+  max-width:560px; margin:0 auto; font-weight:300;
+}
+.gold-rule {
+  width:60px; height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  margin:20px auto 0;
+}
+
+/* ─── BUTTONS ───────────────────────────────────── */
+.btn {
+  display:inline-flex; align-items:center; gap:10px;
+  padding:14px 36px; border-radius:40px; font-size:13px;
+  font-weight:600; letter-spacing:2px; text-transform:uppercase;
+  cursor:pointer; transition:var(--transition); border:2px solid transparent;
+}
+.btn-gold {
+  background:var(--gold); color:var(--black); border-color:var(--gold);
+}
+.btn-gold:hover {
+  background:transparent; color:var(--gold);
+  box-shadow:0 0 0 1px var(--gold),0 12px 36px rgba(201,168,76,0.25);
+  transform:translateY(-3px);
+}
+.btn-outline-white {
+  background:transparent; color:var(--white); border-color:rgba(255,255,255,0.6);
+}
+.btn-outline-white:hover {
+  background:var(--white); color:var(--black); transform:translateY(-3px);
+}
+.btn-outline-dark {
+  background:transparent; color:var(--black); border-color:var(--black);
+}
+.btn-outline-dark:hover {
+  background:var(--black); color:var(--white); transform:translateY(-3px);
+}
+
+/* ─── NAV ───────────────────────────────────────── */
+#navbar {
+  position:fixed; top:0; left:0; right:0; z-index:1000;
+  height:var(--nav-h); display:flex; align-items:center;
+  transition:background 0.5s ease, box-shadow 0.5s ease;
+}
+#navbar.scrolled {
+  background:var(--black);
+  box-shadow:0 2px 40px rgba(0,0,0,0.4);
+}
+#navbar .container {
+  width:100%; display:flex; align-items:center; justify-content:space-between;
+}
+.logo-wrap { display:flex; flex-direction:column; line-height:1; }
+.logo-main {
+  font-family:'Cormorant Garamond', serif; font-size:28px; font-weight:700;
+  color:var(--white); letter-spacing:3px; text-transform:uppercase;
+}
+.logo-tagline {
+  font-size:9px; letter-spacing:4px; color:var(--gold);
+  text-transform:uppercase; font-weight:500; margin-top:3px;
+}
+.nav-links {
+  display:flex; align-items:center; list-style:none; gap:36px;
+}
+.nav-links a {
+  font-size:12px; font-weight:500; letter-spacing:2px;
+  text-transform:uppercase; color:rgba(255,255,255,0.8);
+  position:relative; transition:color 0.3s;
+}
+.nav-links a::after {
+  content:''; position:absolute; bottom:-4px; left:0;
+  width:0; height:1px; background:var(--gold); transition:width 0.3s;
+}
+.nav-links a:hover { color:var(--gold); }
+.nav-links a:hover::after { width:100%; }
+.nav-cta {
+  padding:10px 26px; background:var(--gold); color:var(--black) !important;
+  border-radius:30px; font-weight:600 !important; font-size:12px !important;
+  letter-spacing:1.5px; border:2px solid var(--gold); transition:var(--transition);
+}
+.nav-cta:hover {
+  background:transparent !important; color:var(--gold) !important;
+}
+.nav-cta::after { display:none !important; }
+
+.hamburger {
+  display:none; flex-direction:column; gap:5px;
+  cursor:pointer; background:none; border:none; padding:4px;
+}
+.hamburger span {
+  width:26px; height:2px; background:var(--white);
+  transition:var(--transition); display:block;
+}
+.hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
+.hamburger.open span:nth-child(2) { opacity:0; }
+.hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
+
+/* ─── HERO ──────────────────────────────────────── */
+.hero {
+  position:relative; height:100vh; min-height:700px;
+  display:flex; align-items:center; justify-content:center;
+  overflow:hidden;
+}
+.hero-bg {
+  position:absolute; inset:0; z-index:0;
+  background:#1c1c1c; /* fallback */
+}
+.hero-bg img {
+  width:100%; height:100%; object-fit:cover;
+  transform:scale(1.05); animation:heroZoom 12s ease-in-out infinite alternate;
+}
+@keyframes heroZoom { from{transform:scale(1.05)} to{transform:scale(1.12)} }
+.hero-overlay {
+  position:absolute; inset:0; z-index:1;
+  background:linear-gradient(135deg,rgba(14,14,14,0.75) 0%,rgba(14,14,14,0.45) 60%,rgba(201,168,76,0.15) 100%);
+}
+.hero-content {
+  position:relative; z-index:2; text-align:center;
+  color:var(--white); padding:20px;
+  animation:fadeUp 1.2s ease-out both;
+}
+.hero-badge {
+  display:inline-flex; align-items:center; gap:10px;
+  background:rgba(201,168,76,0.15); border:1px solid rgba(201,168,76,0.4);
+  color:var(--gold-light); padding:8px 22px; border-radius:30px;
+  font-size:11px; letter-spacing:3px; text-transform:uppercase;
+  margin-bottom:30px; backdrop-filter:blur(6px);
+}
+.hero-badge span { width:6px; height:6px; background:var(--gold); border-radius:50%; }
+.hero h1 {
+  font-family:'Cormorant Garamond', serif;
+  font-size:clamp(52px,9vw,110px); font-weight:700; line-height:1.05;
+  margin-bottom:24px; letter-spacing:-1px;
+}
+.hero h1 em { font-style:italic; color:var(--gold-light); }
+.hero-sub {
+  font-size:clamp(14px,2vw,18px); font-weight:300; letter-spacing:2px;
+  color:rgba(255,255,255,0.75); margin-bottom:50px; max-width:540px;
+  margin-left:auto; margin-right:auto;
+}
+.hero-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+.hero-scroll {
+  position:absolute; bottom:36px; left:50%; transform:translateX(-50%);
+  z-index:2; display:flex; flex-direction:column; align-items:center;
+  gap:8px; color:rgba(255,255,255,0.5); font-size:10px; letter-spacing:3px;
+  text-transform:uppercase; animation:scrollPulse 2s ease-in-out infinite;
+}
+.hero-scroll .scroll-line {
+  width:1px; height:50px;
+  background:linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
+}
+@keyframes scrollPulse { 0%,100%{opacity:0.5} 50%{opacity:1} }
+
+/* ─── TICKER ────────────────────────────────────── */
+.ticker {
+  background:var(--gold); color:var(--black);
+  padding:14px 0; overflow:hidden; white-space:nowrap;
+}
+.ticker-inner {
+  display:inline-block; animation:ticker 25s linear infinite;
+  font-size:12px; font-weight:600; letter-spacing:3px; text-transform:uppercase;
+}
+.ticker-inner span { margin:0 50px; }
+.ticker-inner .dot { color:var(--black); opacity:0.5; margin:0 20px; }
+@keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+/* ─── ABOUT ─────────────────────────────────────── */
+.about-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;
+}
+.about-img-wrap {
+  position:relative;
+}
+.about-img-main {
+  width:100%; height:600px; border-radius:var(--radius); overflow:hidden;
+  position:relative;
+}
+.about-img-main img { height:100%; transition:transform 0.8s ease; }
+.about-img-main:hover img { transform:scale(1.05); }
+.about-img-float {
+  position:absolute; bottom:-40px; right:-40px;
+  width:200px; height:220px; border-radius:var(--radius); overflow:hidden;
+  border:6px solid var(--white); box-shadow:0 20px 60px rgba(0,0,0,0.2);
+}
+.about-img-float img { height:100%; }
+.about-award {
+  position:absolute; top:30px; left:-30px;
+  background:var(--gold); color:var(--black);
+  padding:16px 20px; border-radius:var(--radius);
+  text-align:center; box-shadow:0 10px 30px rgba(201,168,76,0.3);
+  min-width:110px;
+}
+.about-award .num {
+  font-family:'Cormorant Garamond', serif; font-size:42px; font-weight:700;
+  line-height:1;
+}
+.about-award .lbl { font-size:10px; letter-spacing:2px; text-transform:uppercase; font-weight:600; }
+.about-body { padding-left:20px; }
+.about-body .section-label { text-align:left; display:block; }
+.about-body .section-title { text-align:left; }
+.about-body p { color:var(--text-muted); font-size:15px; margin-bottom:18px; font-weight:300; }
+.about-feats { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:36px 0; }
+.about-feat {
+  display:flex; align-items:flex-start; gap:12px;
+  padding:16px; background:var(--off-white); border-radius:var(--radius);
+}
+.feat-icon {
+  width:36px; height:36px; background:var(--gold); border-radius:50%;
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  font-size:16px;
+}
+.feat-txt strong { display:block; font-size:13px; font-weight:600; color:var(--black); margin-bottom:2px; }
+.feat-txt span  { font-size:12px; color:var(--text-muted); }
+.stats-row {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--cream); padding-top:36px; gap:20px;
+}
+.stat { text-align:center; }
+.stat-n {
+  font-family:'Cormorant Garamond', serif; font-size:46px;
+  font-weight:700; color:var(--gold); line-height:1; margin-bottom:6px;
+}
+.stat-l { font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); }
+
+/* ─── SERVICES ──────────────────────────────────── */
+.services-wrap { background:var(--off-white); }
+.services-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:2px;
+  border:1px solid var(--cream);
+}
+.svc-card {
+  background:var(--white); padding:48px 36px;
+  border-right:1px solid var(--cream); border-bottom:1px solid var(--cream);
+  position:relative; overflow:hidden; transition:var(--transition); cursor:default;
+}
+.svc-card::before {
+  content:''; position:absolute; inset:0;
+  background:var(--black); transform:scaleY(0); transform-origin:bottom;
+  transition:transform 0.5s cubic-bezier(0.25,0.8,0.25,1); z-index:0;
+}
+.svc-card:hover::before { transform:scaleY(1); }
+.svc-card > * { position:relative; z-index:1; }
+.svc-card:hover .svc-icon-bg { background:rgba(201,168,76,0.15); }
+.svc-card:hover h3,
+.svc-card:hover p { color:var(--white); }
+.svc-card:hover .svc-num { color:rgba(201,168,76,0.2); }
+.svc-card:hover .svc-arrow { color:var(--gold); opacity:1; }
+.svc-num {
+  font-family:'Cormorant Garamond', serif; font-size:64px; font-weight:700;
+  color:var(--cream); line-height:1; margin-bottom:20px;
+  transition:color 0.4s;
+}
+.svc-icon-bg {
+  width:56px; height:56px; background:var(--off-white); border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:26px; margin-bottom:20px; transition:background 0.4s;
+}
+.svc-card h3 {
+  font-family:'Cormorant Garamond', serif; font-size:26px; font-weight:600;
+  color:var(--black); margin-bottom:14px; transition:color 0.4s;
+}
+.svc-card p {
+  font-size:14px; color:var(--text-muted); line-height:1.8;
+  transition:color 0.4s; font-weight:300;
+}
+.svc-arrow {
+  margin-top:28px; font-size:22px; color:var(--gold); opacity:0;
+  transition:var(--transition); display:block;
+}
+
+/* ─── PORTFOLIO ─────────────────────────────────── */
+.port-wrap { background:var(--white); }
+.port-filters {
+  display:flex; justify-content:center; gap:10px;
+  margin-bottom:50px; flex-wrap:wrap;
+}
+.pf-btn {
+  padding:9px 22px; border-radius:30px; font-size:12px; font-weight:600;
+  letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;
+  border:1.5px solid var(--cream); background:transparent;
+  color:var(--text-muted); transition:var(--transition);
+}
+.pf-btn.active, .pf-btn:hover {
+  background:var(--black); color:var(--gold); border-color:var(--black);
+}
+.port-grid {
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  grid-template-rows:auto;
+  gap:16px;
+}
+.port-item {
+  position:relative; overflow:hidden; border-radius:var(--radius);
+  cursor:pointer; transition:opacity 0.4s, transform 0.4s;
+}
+.port-item.featured { grid-column:span 2; grid-row:span 2; }
+.port-item.tall      { grid-row:span 2; }
+.port-img-wrap {
+  width:100%; height:100%; min-height:280px; overflow:hidden;
+}
+.port-item.featured .port-img-wrap { min-height:580px; }
+.port-item.tall .port-img-wrap { min-height:580px; }
+.port-img-wrap img {
+  width:100%; height:100%; object-fit:cover;
+  transition:transform 0.7s ease;
+}
+.port-item:hover .port-img-wrap img { transform:scale(1.08); }
+.port-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(to top,rgba(14,14,14,0.9) 0%,rgba(14,14,14,0.1) 60%,transparent 100%);
+  display:flex; align-items:flex-end; padding:28px;
+  opacity:0; transition:opacity 0.4s;
+}
+.port-item:hover .port-overlay { opacity:1; }
+.port-info { color:var(--white); }
+.port-cat {
+  font-size:10px; letter-spacing:3px; text-transform:uppercase;
+  color:var(--gold); font-weight:600; margin-bottom:6px;
+}
+.port-name {
+  font-family:'Cormorant Garamond', serif; font-size:22px;
+  font-weight:700; line-height:1.2;
+}
+.port-badge {
+  position:absolute; top:16px; right:16px;
+  background:var(--gold); color:var(--black); padding:4px 14px;
+  border-radius:20px; font-size:10px; font-weight:700;
+  letter-spacing:1.5px; text-transform:uppercase;
+}
+/* always-visible label on non-hovered */
+.port-label {
+  position:absolute; bottom:0; left:0; right:0;
+  background:linear-gradient(to top,rgba(14,14,14,0.85),transparent);
+  padding:20px 20px 14px; color:var(--white);
+}
+.port-label .port-cat { opacity:0.8; }
+.port-label .port-name { font-size:18px; }
+.port-item:hover .port-label { opacity:0; }
+
+/* ─── PROCESS ───────────────────────────────────── */
+.process-wrap { background:var(--black); color:var(--white); }
+.process-wrap .section-title { color:var(--white); }
+.process-wrap .section-sub   { color:var(--warm-gray); }
+.process-grid {
+  display:grid; grid-template-columns:repeat(4,1fr); gap:0;
+  position:relative; margin-top:60px;
+}
+.process-grid::before {
+  content:''; position:absolute; top:56px; left:12.5%; right:12.5%; height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold),var(--gold),transparent);
+  z-index:0;
+}
+.proc-step {
+  text-align:center; padding:0 24px; position:relative; z-index:1;
+}
+.proc-circle {
+  width:112px; height:112px; border-radius:50%;
+  background:var(--charcoal); border:1px solid rgba(201,168,76,0.3);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  margin:0 auto 30px; transition:var(--transition); cursor:default;
+  position:relative;
+}
+.proc-circle::after {
+  content:''; position:absolute; inset:-6px; border-radius:50%;
+  border:2px solid transparent; border-top-color:var(--gold);
+  transition:var(--transition);
+}
+.proc-step:hover .proc-circle { background:var(--gold); }
+.proc-step:hover .proc-circle::after { transform:rotate(360deg); border-top-color:transparent; }
+.proc-step:hover .proc-num { color:var(--black); }
+.proc-step:hover .proc-icon { filter:grayscale(1) invert(0) brightness(0); }
+.proc-num {
+  font-family:'Cormorant Garamond', serif; font-size:13px; font-weight:700;
+  color:var(--gold); letter-spacing:2px; transition:color 0.4s;
+}
+.proc-icon { font-size:28px; line-height:1; margin:4px 0; }
+.proc-step h3 {
+  font-family:'Cormorant Garamond', serif; font-size:22px;
+  font-weight:600; color:var(--white); margin-bottom:12px;
+}
+.proc-step p { font-size:13px; color:var(--warm-gray); line-height:1.8; font-weight:300; }
+
+/* ─── TESTIMONIALS ──────────────────────────────── */
+.testi-wrap { background:var(--cream); }
+.testi-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.testi-card {
+  background:var(--white); border-radius:var(--radius);
+  padding:40px; position:relative; overflow:hidden;
+  transition:var(--transition); box-shadow:0 2px 20px rgba(0,0,0,0.04);
+}
+.testi-card::before {
+  content:'\201C'; font-family:'Cormorant Garamond', serif;
+  font-size:160px; color:var(--cream); position:absolute;
+  top:-20px; right:20px; line-height:1; z-index:0;
+}
+.testi-card:hover {
+  transform:translateY(-8px); box-shadow:0 20px 60px rgba(0,0,0,0.1);
+}
+.testi-card > * { position:relative; z-index:1; }
+.testi-stars { display:flex; gap:4px; margin-bottom:20px; }
+.testi-stars span { color:var(--gold); font-size:16px; }
+.testi-text {
+  font-family:'Cormorant Garamond', serif; font-size:19px; line-height:1.65;
+  font-style:italic; color:var(--charcoal); margin-bottom:28px;
+}
+.testi-author { display:flex; align-items:center; gap:14px; }
+.testi-av {
+  width:48px; height:48px; border-radius:50%; overflow:hidden;
+  flex-shrink:0; border:2px solid var(--gold);
+  background:var(--cream); display:flex; align-items:center; justify-content:center;
+  font-family:'Cormorant Garamond', serif; font-size:20px; font-weight:700;
+  color:var(--gold);
+}
+.testi-av img { width:100%; height:100%; object-fit:cover; }
+.testi-name { font-weight:600; font-size:15px; color:var(--black); margin-bottom:2px; }
+.testi-loc  { font-size:12px; color:var(--text-muted); letter-spacing:1px; }
+
+/* ─── FAQ ───────────────────────────────────────── */
+.faq-wrap { background:var(--white); }
+.faq-body { max-width:760px; margin:0 auto; }
+.faq-item {
+  border-bottom:1px solid var(--cream); overflow:hidden;
+}
+.faq-q {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:24px 0; cursor:pointer; gap:20px;
+  font-size:16px; font-weight:500; color:var(--black);
+  transition:color 0.3s; user-select:none;
+}
+.faq-q:hover { color:var(--gold); }
+.faq-icon {
+  width:34px; height:34px; border-radius:50%; background:var(--off-white);
+  border:1px solid var(--cream); display:flex; align-items:center;
+  justify-content:center; flex-shrink:0; transition:var(--transition);
+  font-size:18px; color:var(--text-muted); font-weight:300;
+}
+.faq-item.open .faq-icon {
+  background:var(--gold); color:var(--black); border-color:var(--gold);
+  transform:rotate(45deg);
+}
+.faq-a {
+  max-height:0; overflow:hidden; transition:max-height 0.45s ease, padding 0.3s;
+  font-size:14px; color:var(--text-muted); line-height:1.85; font-weight:300;
+}
+.faq-item.open .faq-a { max-height:300px; padding-bottom:24px; }
+
+/* ─── CONTACT ───────────────────────────────────── */
+.contact-wrap { background:var(--off-white); }
+.contact-grid { display:grid; grid-template-columns:1fr 1.2fr; gap:80px; }
+.contact-info { padding-right:20px; }
+.contact-info .section-label { text-align:left; display:block; }
+.contact-info .section-title { text-align:left; font-size:clamp(32px,4vw,52px); }
+.contact-info p { color:var(--text-muted); font-size:15px; font-weight:300; margin-bottom:40px; }
+.cinfo-list { display:flex; flex-direction:column; gap:24px; margin-bottom:40px; }
+.cinfo-item { display:flex; gap:16px; align-items:flex-start; }
+.cinfo-icon {
+  width:46px; height:46px; background:var(--gold);
+  border-radius:var(--radius); display:flex; align-items:center;
+  justify-content:center; font-size:20px; flex-shrink:0; color:var(--black);
+}
+.cinfo-body strong { display:block; font-size:13px; font-weight:600; color:var(--black); margin-bottom:4px; }
+.cinfo-body span  { font-size:14px; color:var(--text-muted); display:block; line-height:1.6; }
+.cinfo-body a     { color:var(--gold); transition:color 0.3s; }
+.cinfo-body a:hover { color:var(--black); }
+.wa-box {
+  display:flex; align-items:center; gap:14px;
+  background:var(--white); border:1px solid var(--cream);
+  padding:18px 22px; border-radius:var(--radius);
+  transition:var(--transition); cursor:pointer;
+}
+.wa-box:hover { border-color:var(--gold); box-shadow:var(--shadow-md); }
+.wa-ic { font-size:32px; }
+.wa-txt strong { display:block; font-size:14px; font-weight:600; color:var(--black); }
+.wa-txt span   { font-size:13px; color:var(--text-muted); }
+
+/* Contact Form */
+.cform {
+  background:var(--white); padding:50px 44px;
+  border-radius:var(--radius); box-shadow:0 4px 40px rgba(0,0,0,0.07);
+}
+.cform h3 {
+  font-family:'Cormorant Garamond', serif; font-size:30px;
+  font-weight:700; color:var(--black); margin-bottom:6px;
+}
+.cform-sub { font-size:14px; color:var(--text-muted); margin-bottom:32px; font-weight:300; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px; }
+.form-group { display:flex; flex-direction:column; margin-bottom:16px; }
+.form-group label {
+  font-size:11px; font-weight:600; letter-spacing:2px;
+  text-transform:uppercase; color:var(--text-muted); margin-bottom:8px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding:13px 16px; border:1px solid var(--cream); border-radius:var(--radius);
+  font-family:'Jost', sans-serif; font-size:14px; color:var(--black);
+  background:var(--off-white); transition:var(--transition); outline:none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color:var(--gold); background:var(--white);
+  box-shadow:0 0 0 3px rgba(201,168,76,0.12);
+}
+.form-group textarea { resize:vertical; min-height:110px; }
+.form-group select { cursor:pointer; appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23b5a99a' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:right 16px center;
+}
+.submit-btn {
+  width:100%; padding:16px; background:var(--black); color:var(--gold);
+  border:none; border-radius:var(--radius); font-family:'Jost',sans-serif;
+  font-size:13px; font-weight:600; letter-spacing:3px; text-transform:uppercase;
+  cursor:pointer; transition:var(--transition);
+}
+.submit-btn:hover { background:var(--gold); color:var(--black); }
+.form-success {
+  display:none; text-align:center; padding:20px;
+  background:rgba(201,168,76,0.1); border:1px solid var(--gold);
+  border-radius:var(--radius); color:var(--gold-dark); font-weight:600;
+  margin-bottom:20px;
+}
+.form-success.show { display:block; }
+
+/* ─── FOOTER ────────────────────────────────────── */
+footer { background:var(--black); color:var(--white); }
+.footer-top { padding:80px 0 60px; }
+.footer-grid { display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:50px; }
+.footer-brand .logo-main { display:block; margin-bottom:6px; }
+.footer-brand .logo-tagline { display:block; margin-bottom:20px; }
+.footer-brand p { font-size:14px; color:var(--warm-gray); line-height:1.8; font-weight:300; max-width:270px; }
+.footer-socials { display:flex; gap:12px; margin-top:24px; }
+.footer-socials a {
+  width:38px; height:38px; border:1px solid rgba(255,255,255,0.1);
+  border-radius:50%; display:flex; align-items:center; justify-content:center;
+  font-size:15px; transition:var(--transition); color:var(--warm-gray);
+  text-decoration:none;
+}
+.footer-socials a:hover { border-color:var(--gold); color:var(--gold); }
+.footer-col h4 {
+  font-family:'Cormorant Garamond', serif; font-size:20px;
+  color:var(--gold); margin-bottom:24px; font-weight:600;
+}
+.footer-col ul { list-style:none; display:flex; flex-direction:column; gap:12px; }
+.footer-col a {
+  font-size:14px; color:var(--warm-gray); transition:color 0.3s;
+  display:flex; align-items:center; gap:8px;
+}
+.footer-col a::before {
+  content:''; width:0; height:1px; background:var(--gold);
+  transition:width 0.3s; display:inline-block;
+}
+.footer-col a:hover { color:var(--gold); }
+.footer-col a:hover::before { width:14px; }
+.footer-bottom {
+  border-top:1px solid rgba(255,255,255,0.07);
+  padding:24px 0; text-align:center;
+  font-size:13px; color:var(--warm-gray); letter-spacing:0.5px;
+}
+.footer-bottom strong { color:var(--gold); }
+
+/* ─── WHATSAPP ──────────────────────────────────── */
+.wa-fab {
+  position:fixed; bottom:32px; right:32px; z-index:999;
+  width:62px; height:62px; border-radius:50%;
+  background:linear-gradient(135deg,#25d366,#128c7e);
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 6px 24px rgba(37,211,102,0.45);
+  transition:var(--transition); text-decoration:none;
+  animation:fabPulse 3s ease-in-out infinite;
+}
+.wa-fab:hover { transform:scale(1.12) translateY(-4px); box-shadow:0 12px 36px rgba(37,211,102,0.55); }
+.wa-fab svg { width:32px; height:32px; fill:var(--white); }
+@keyframes fabPulse {
+  0%,100% { box-shadow:0 6px 24px rgba(37,211,102,0.45); }
+  50%      { box-shadow:0 6px 36px rgba(37,211,102,0.7),0 0 0 12px rgba(37,211,102,0.08); }
+}
+
+/* ─── SCROLL ANIMATIONS ─────────────────────────── */
+@keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+.reveal {
+  opacity:0; transform:translateY(28px);
+  transition:opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible { opacity:1; transform:translateY(0); }
+
+/* ─── RESPONSIVE ────────────────────────────────── */
+@media (max-width:1100px) {
+  .about-grid { grid-template-columns:1fr; gap:60px; }
+  .about-img-float { display:none; }
+  .about-award { left:20px; }
+  .about-img-main { height:460px; }
+  .about-body { padding-left:0; }
+  .services-grid { grid-template-columns:repeat(2,1fr); }
+  .footer-grid { grid-template-columns:1fr 1fr; gap:40px; }
+}
+@media (max-width:900px) {
+  .port-grid { grid-template-columns:1fr 1fr; }
+  .port-item.featured { grid-column:span 2; }
+  .port-item.tall { grid-row:span 1; }
+  .port-item.tall .port-img-wrap { min-height:280px; }
+  .testi-grid { grid-template-columns:1fr; }
+  .contact-grid { grid-template-columns:1fr; gap:40px; }
+  .process-grid { grid-template-columns:repeat(2,1fr); gap:40px; }
+  .process-grid::before { display:none; }
+  .stats-row { grid-template-columns:repeat(2,1fr); }
+  .about-feats { grid-template-columns:1fr; }
+  .form-row { grid-template-columns:1fr; }
+}
+@media (max-width:768px) {
+  :root { --nav-h:64px; }
+  .nav-links { display:none; position:fixed; top:var(--nav-h); left:0; right:0;
+    background:var(--black); flex-direction:column; gap:0; padding:20px 0;
+    border-top:1px solid rgba(255,255,255,0.07);
+  }
+  .nav-links.open { display:flex; }
+  .nav-links li { border-bottom:1px solid rgba(255,255,255,0.05); }
+  .nav-links a { padding:16px 32px; display:block; }
+  .hamburger { display:flex; }
+  .hero h1 { font-size:clamp(42px,11vw,72px); }
+  .services-grid { grid-template-columns:1fr; }
+  .port-grid { grid-template-columns:1fr; }
+  .port-item.featured { grid-column:span 1; }
+  .port-overlay { opacity:1; }
+  .port-label { display:none; }
+  .section-wrap { padding:70px 0; }
+  .about-img-main { height:320px; }
+  .cform { padding:32px 24px; }
+  .footer-grid { grid-template-columns:1fr; }
+  .wa-fab { bottom:20px; right:20px; width:54px; height:54px; }
+  .wa-fab svg { width:26px; height:26px; }
+}
+@media (max-width:480px) {
+  .stats-row { grid-template-columns:1fr 1fr; }
+  .hero-btns { flex-direction:column; align-items:center; }
+  .btn { width:100%; justify-content:center; }
+  .process-grid { grid-template-columns:1fr; }
+  .port-filters { gap:8px; }
+  .pf-btn { padding:8px 14px; font-size:11px; }
+  .testi-grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════ NAVBAR ══════════════════════════════ -->
+<nav id="navbar">
+  <div class="container">
+    <a href="#" class="logo-wrap">
+      <span class="logo-main">UrbanNest</span>
+      <span class="logo-tagline">Interiors &amp; Design</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="nav-cta">Get Quote</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════ HERO ════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img
+      src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1600&q=85&auto=format&fit=crop"
+      alt="Luxury interior living room"
+      loading="eager"
+      onerror="this.parentElement.style.background='linear-gradient(135deg,#1c1c1c,#2a2a2a)'"
+    >
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span></span>Delhi NCR's Premier Design Studio<span></span></div>
+    <h1>Where <em>Spaces</em><br>Become Masterpieces</h1>
+    <p class="hero-sub">Award-winning luxury interiors crafted for the discerning few who demand nothing but perfection</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn btn-gold">Book Consultation</a>
+      <a href="#portfolio" class="btn btn-outline-white">View Our Work</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
+</section>
+
+<!-- ══════════════════════════════ TICKER ══════════════════════════════ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-inner">
+    <span>Luxury Interiors</span><span class="dot">✦</span>
+    <span>Award Winning Studio</span><span class="dot">✦</span>
+    <span>Delhi NCR</span><span class="dot">✦</span>
+    <span>500+ Projects</span><span class="dot">✦</span>
+    <span>15+ Years Excellence</span><span class="dot">✦</span>
+    <span>Residential Design</span><span class="dot">✦</span>
+    <span>Commercial Spaces</span><span class="dot">✦</span>
+    <span>Modular Kitchens</span><span class="dot">✦</span>
+    <span>Luxury Interiors</span><span class="dot">✦</span>
+    <span>Award Winning Studio</span><span class="dot">✦</span>
+    <span>Delhi NCR</span><span class="dot">✦</span>
+    <span>500+ Projects</span><span class="dot">✦</span>
+    <span>15+ Years Excellence</span><span class="dot">✦</span>
+    <span>Residential Design</span><span class="dot">✦</span>
+    <span>Commercial Spaces</span><span class="dot">✦</span>
+    <span>Modular Kitchens</span><span class="dot">✦</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ ABOUT ═══════════════════════════════ -->
+<section class="section-wrap" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <div class="about-img-main">
+          <img
+            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=900&q=85&auto=format&fit=crop"
+            alt="Elegant interior design studio workspace"
+            loading="lazy"
+            onerror="this.style.background='#ede8df'"
+          >
+        </div>
+        <div class="about-img-float">
+          <img
+            src="https://images.unsplash.com/photo-1616137148650-4aa14051cf9d?w=400&q=85&auto=format&fit=crop"
+            alt="Detail interior shot"
+            loading="lazy"
+            onerror="this.style.background='#c9a84c'"
+          >
+        </div>
+        <div class="about-award">
+          <div class="num">45+</div>
+          <div class="lbl">Awards Won</div>
+        </div>
+      </div>
+
+      <div class="about-body reveal">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title" style="text-align:left;font-size:clamp(36px,4vw,56px);">Crafting Interiors<br>That <em>Inspire</em></h2>
+        <p>Founded in 2009, UrbanNest Interiors has redefined luxury living across Delhi NCR. We believe every space tells a story — and we're here to help yours speak volumes.</p>
+        <p>Our multidisciplinary team of 35+ designers, architects and project managers brings together the finest craftsmanship, cutting-edge 3D technology and sustainable design ethos to create spaces that are not just beautiful, but deeply personal.</p>
+        <div class="about-feats">
+          <div class="about-feat"><div class="feat-icon">🏆</div><div class="feat-txt"><strong>Award-Winning</strong><span>45+ national & international design awards</span></div></div>
+          <div class="about-feat"><div class="feat-icon">🌿</div><div class="feat-txt"><strong>Sustainable</strong><span>Eco-conscious materials &amp; practices</span></div></div>
+          <div class="about-feat"><div class="feat-icon">📐</div><div class="feat-txt"><strong>3D Visualisation</strong><span>Photo-realistic renders before work begins</span></div></div>
+          <div class="about-feat"><div class="feat-icon">🤝</div><div class="feat-txt"><strong>End-to-End</strong><span>Design, procurement &amp; execution managed</span></div></div>
+        </div>
+        <a href="#contact" class="btn btn-gold">Start Your Project</a>
+        <div class="stats-row" style="margin-top:40px;">
+          <div class="stat"><div class="stat-n">500+</div><div class="stat-l">Projects Done</div></div>
+          <div class="stat"><div class="stat-n">98%</div><div class="stat-l">Happy Clients</div></div>
+          <div class="stat"><div class="stat-n">15+</div><div class="stat-l">Years Active</div></div>
+          <div class="stat"><div class="stat-n">35+</div><div class="stat-l">Team Members</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ SERVICES ════════════════════════════ -->
+<section class="section-wrap services-wrap" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">Our Services</h2>
+      <div class="gold-rule"></div>
+      <p class="section-sub" style="margin-top:20px;">Comprehensive interior design solutions tailored to every lifestyle and aspiration</p>
+    </div>
+    <div class="services-grid reveal">
+      <div class="svc-card">
+        <div class="svc-num">01</div>
+        <div class="svc-icon-bg">🏡</div>
+        <h3>Residential Interior Design</h3>
+        <p>Transform your home into a bespoke sanctuary. From plush living rooms to serene bedrooms, we craft every corner with precision and warmth.</p>
+        <span class="svc-arrow">→</span>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">02</div>
+        <div class="svc-icon-bg">🏢</div>
+        <h3>Commercial Interior Design</h3>
+        <p>Inspire your team and impress clients with workspaces that embody your brand ethos — functional, forward-looking and visually striking.</p>
+        <span class="svc-arrow">→</span>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">03</div>
+        <div class="svc-icon-bg">🍳</div>
+        <h3>Modular Kitchen Design</h3>
+        <p>State-of-the-art modular kitchens where culinary art meets elegant design — optimised for storage, workflow and timeless aesthetics.</p>
+        <span class="svc-arrow">→</span>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">04</div>
+        <div class="svc-icon-bg">📐</div>
+        <h3>Space Planning</h3>
+        <p>Maximise every square foot with intelligent spatial planning that creates harmony, flow and a sense of effortless space in any room.</p>
+        <span class="svc-arrow">→</span>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">05</div>
+        <div class="svc-icon-bg">🔨</div>
+        <h3>Renovation &amp; Remodeling</h3>
+        <p>Breathe new life into tired spaces. Our renovation team executes flawlessly — minimal disruption, maximum transformation.</p>
+        <span class="svc-arrow">→</span>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">06</div>
+        <div class="svc-icon-bg">✨</div>
+        <h3>Turnkey Interior Solutions</h3>
+        <p>The complete end-to-end experience. From first sketch to final styling, we manage everything so you simply walk into your dream space.</p>
+        <span class="svc-arrow">→</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ PORTFOLIO ═══════════════════════════ -->
+<section class="section-wrap port-wrap" id="portfolio">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Our Work</span>
+      <h2 class="section-title">Portfolio</h2>
+      <div class="gold-rule"></div>
+      <p class="section-sub" style="margin-top:20px;">A curated selection of our finest transformations across Delhi NCR</p>
+    </div>
+    <div class="port-filters reveal">
+      <button class="pf-btn active" data-filter="all">All Projects</button>
+      <button class="pf-btn" data-filter="residential">Residential</button>
+      <button class="pf-btn" data-filter="commercial">Commercial</button>
+      <button class="pf-btn" data-filter="apartment">Apartments</button>
+      <button class="pf-btn" data-filter="villa">Villas</button>
+    </div>
+
+    <div class="port-grid reveal" id="portGrid">
+
+      <!-- Featured large -->
+      <div class="port-item featured" data-cat="residential">
+        <div class="port-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=85&auto=format&fit=crop"
+            alt="Luxury penthouse living room"
+            loading="lazy"
+            onerror="this.style.background='#b5a99a'"
+          >
+        </div>
+        <div class="port-badge">Featured</div>
+        <div class="port-label"><div class="port-cat">Residential</div><div class="port-name">The Penthouse — Gurgaon</div></div>
+        <div class="port-overlay">
+          <div class="port-info"><div class="port-cat">Residential Design</div><div class="port-name">The Penthouse — Gurgaon</div></div>
+        </div>
+      </div>
+
+      <!-- Tall right -->
+      <div class="port-item tall" data-cat="villa">
+        <div class="port-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=700&q=85&auto=format&fit=crop"
+            alt="Luxury villa bedroom"
+            loading="lazy"
+            onerror="this.style.background='#c9a84c'"
+          >
+        </div>
+        <div class="port-label"><div class="port-cat">Villa</div><div class="port-name">Riviera Villa — Noida</div></div>
+        <div class="port-overlay">
+          <div class="port-info"><div class="port-cat">Villa Design</div><div class="port-name">Riviera Villa — Noida</div></div>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="port-item" data-cat="apartment">
+        <div class="port-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=700&q=85&auto=format&fit=crop"
+            alt="Modern apartment living room"
+            loading="lazy"
+            onerror="this.style.background='#ede8df'"
+          >
+        </div>
+        <div class="port-label"><div class="port-cat">Apartment</div><div class="port-name">Sky Loft — Dwarka</div></div>
+        <div class="port-overlay">
+          <div class="port-info"><div class="port-cat">Apartment</div><div class="port-name">Sky Loft — Dwarka</div></div>
+        </div>
+      </div>
+
+      <div class="port-item" data-cat="commercial">
+        <div class="port-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1497366216548-37519c4f8ec5?w=700&q=85&auto=format&fit=crop"
+            alt="Modern corporate office"
+            loading="lazy"
+            onerror="this.style.background='#7a7265'"
+          >
+        </div>
+        <div class="port-label"><div class="port-cat">Commercial</div><div class="port-name">Apex Corp HQ — Connaught Place</div></div>
+        <div class="port-overlay">
+          <div class="port-info"><div class="port-cat">Commercial</div><div class="port-name">Apex Corp HQ — Connaught Place</div></div>
+        </div>
+      </div>
+
+      <div class="port-item" data-cat="residential">
+        <div class="port-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=700&q=85&auto=format&fit=crop"
+            alt="Contemporary bedroom"
+            loading="lazy"
+            onerror="this.style.background='#b5a99a'"
+          >
+        </div>
+        <div class="port-label"><div class="port-cat">Residential</div><div class="port-name">The Artisan Suite — Greater Noida</div></div>
+        <div class="port-overlay">
+          <div class="port-info"><div class="port-cat">Residential</div><div class="port-name">The Artisan Suite — Greater Noida</div></div>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="port-item" data-cat="villa">
+        <div class="port-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=700&q=85&auto=format&fit=crop"
+            alt="Luxury villa interior"
+            loading="lazy"
+            onerror="this.style.background='#c9a84c'"
+          >
+        </div>
+        <div class="port-label"><div class="port-cat">Villa</div><div class="port-name">Casa Elegante — South Delhi</div></div>
+        <div class="port-overlay">
+          <div class="port-info"><div class="port-cat">Villa Design</div><div class="port-name">Casa Elegante — South Delhi</div></div>
+        </div>
+      </div>
+
+      <div class="port-item" data-cat="apartment">
+        <div class="port-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700&q=85&auto=format&fit=crop"
+            alt="Minimalist apartment dining"
+            loading="lazy"
+            onerror="this.style.background='#ede8df'"
+          >
+        </div>
+        <div class="port-label"><div class="port-cat">Apartment</div><div class="port-name">Noir Flat — Gurgaon DLF</div></div>
+        <div class="port-overlay">
+          <div class="port-info"><div class="port-cat">Apartment</div><div class="port-name">Noir Flat — Gurgaon DLF</div></div>
+        </div>
+      </div>
+
+      <div class="port-item" data-cat="commercial">
+        <div class="port-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=700&q=85&auto=format&fit=crop"
+            alt="Luxury restaurant design"
+            loading="lazy"
+            onerror="this.style.background='#7a7265'"
+          >
+        </div>
+        <div class="port-label"><div class="port-cat">Commercial</div><div class="port-name">Oro Restaurant — Khan Market</div></div>
+        <div class="port-overlay">
+          <div class="port-info"><div class="port-cat">Commercial</div><div class="port-name">Oro Restaurant — Khan Market</div></div>
+        </div>
+      </div>
+
+      <div class="port-item" data-cat="residential">
+        <div class="port-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=700&q=85&auto=format&fit=crop"
+            alt="Modern kitchen design"
+            loading="lazy"
+            onerror="this.style.background='#b5a99a'"
+          >
+        </div>
+        <div class="port-label"><div class="port-cat">Residential</div><div class="port-name">Chef's Kitchen — Vasant Vihar</div></div>
+        <div class="port-overlay">
+          <div class="port-info"><div class="port-cat">Residential</div><div class="port-name">Chef's Kitchen — Vasant Vihar</div></div>
+        </div>
+      </div>
+
+    </div><!-- /port-grid -->
+  </div>
+</section>
+
+<!-- ══════════════════════════════ PROCESS ═════════════════════════════ -->
+<section class="section-wrap process-wrap" id="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">How We Work</span>
+      <h2 class="section-title">Our Design Process</h2>
+      <div class="gold-rule"></div>
+      <p class="section-sub" style="margin-top:20px;color:var(--warm-gray)">Four seamless steps from vision to stunning reality</p>
+    </div>
+    <div class="process-grid reveal">
+      <div class="proc-step">
+        <div class="proc-circle">
+          <span class="proc-num">STEP 01</span>
+          <span class="proc-icon">💬</span>
+        </div>
+        <h3>Discovery Consultation</h3>
+        <p>We listen deeply — your lifestyle, aspirations, budget and timeline. A 90-minute session to lay the creative foundation of your project.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-circle">
+          <span class="proc-num">STEP 02</span>
+          <span class="proc-icon">📋</span>
+        </div>
+        <h3>Design &amp; Planning</h3>
+        <p>Detailed floor plans, 3D renders, mood boards and material selections. You see your space before a single nail is hammered.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-circle">
+          <span class="proc-num">STEP 03</span>
+          <span class="proc-icon">🔧</span>
+        </div>
+        <h3>Expert Execution</h3>
+        <p>Our vetted contractors and artisans bring the design to life with weekly progress updates and strict quality control at every stage.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-circle">
+          <span class="proc-num">STEP 04</span>
+          <span class="proc-icon">🏠</span>
+        </div>
+        <h3>Handover &amp; Styling</h3>
+        <p>A final walkthrough, professional styling and snag resolution — until every detail is perfect. Then you step into your new world.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ TESTIMONIALS ════════════════════════ -->
+<section class="section-wrap testi-wrap" id="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Client Stories</span>
+      <h2 class="section-title">What Our Clients Say</h2>
+      <div class="gold-rule"></div>
+      <p class="section-sub" style="margin-top:20px">Real words from real clients across Delhi NCR</p>
+    </div>
+    <div class="testi-grid reveal">
+
+      <div class="testi-card">
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="testi-text">"UrbanNest turned our 3BHK in Gurgaon into something we see in architecture magazines. The attention to detail is beyond words. Every guest who walks in is stunned."</p>
+        <div class="testi-author">
+          <div class="testi-av">P</div>
+          <div><div class="testi-name">Priya Sharma</div><div class="testi-loc">Homeowner · DLF Phase 4, Gurgaon</div></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="testi-text">"Our new office has completely transformed our team's productivity and morale. Clients always comment on the space. The ROI on this design investment is phenomenal."</p>
+        <div class="testi-author">
+          <div class="testi-av">R</div>
+          <div><div class="testi-name">Rahul Kapoor</div><div class="testi-loc">CEO · Kapoor Tech, Connaught Place</div></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="testi-text">"Our modular kitchen is a work of art. The team listened to everything we needed — the pull-out units, the hidden appliances, the lighting. Absolutely flawless."</p>
+        <div class="testi-author">
+          <div class="testi-av">A</div>
+          <div><div class="testi-name">Anjali Verma</div><div class="testi-loc">Homeowner · Sector 62, Noida</div></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="testi-text">"We gave them a tight timeline and a specific vision. They delivered on time, under budget, and beyond our wildest imagination. The villa looks like a five-star resort now."</p>
+        <div class="testi-author">
+          <div class="testi-av">A</div>
+          <div><div class="testi-name">Arjun Malhotra</div><div class="testi-loc">Homeowner · South Delhi Villa</div></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="testi-text">"The 3D walkthrough before work began gave us total confidence. We could see every corner virtually and suggest changes. Truly professional and transparent throughout."</p>
+        <div class="testi-author">
+          <div class="testi-av">M</div>
+          <div><div class="testi-name">Meera Singh</div><div class="testi-loc">Homeowner · Vasant Kunj, New Delhi</div></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="testi-text">"We renovated our 15-year-old apartment and the result is indistinguishable from a brand-new luxury flat. The team is efficient, honest and incredibly talented."</p>
+        <div class="testi-author">
+          <div class="testi-av">V</div>
+          <div><div class="testi-name">Vikram Joshi</div><div class="testi-loc">Homeowner · Greater Noida West</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ FAQ ══════════════════════════════════ -->
+<section class="section-wrap faq-wrap" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="faq-body reveal">
+
+      <div class="faq-item">
+        <div class="faq-q"><span>What areas do you serve?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">We primarily serve Delhi NCR — covering New Delhi, Gurgaon, Noida, Greater Noida, Faridabad, and Ghaziabad. For premium projects in other cities, we can discuss customised arrangements.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>How much does an interior design project cost?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">Project costs vary based on scope, area size, and material choices. Our residential projects typically start from ₹8–12 lakh for a 2BHK. We offer transparent, itemised quotations with no hidden costs after the initial consultation.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>How long does a full interior design project take?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">A standard 3BHK home takes 10–14 weeks — including 2–3 weeks of design planning, 6–9 weeks of execution, and 1–2 weeks of finishing and styling. Timelines are discussed and agreed upon before we begin.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>Do you provide 3D visualisations before starting work?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">Absolutely. Every project begins with photo-realistic 3D renders and a virtual walkthrough. You approve every detail — furniture, colours, lighting, materials — before a single nail is hammered. Changes are free at this stage.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>Can you work with my existing furniture?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes, we can design around your existing pieces — especially heirloom furniture or items with sentimental value. We're skilled at blending old and new beautifully.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>What is included in your turnkey service?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">Our turnkey service covers: concept design, 3D renders, material procurement, civil work, electrical and plumbing, carpentry and false ceilings, painting, furniture sourcing, decor and styling, and a final quality walkthrough. You get a ready-to-live-in space.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>Do you offer any warranty on the work done?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes. We offer a 1-year service warranty on all execution work and a 5-year warranty on modular kitchen carcasses. Any snags identified within the warranty period are rectified at no extra cost.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>How do I get started?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">Simply fill the contact form below, call us at +91 98765 43210, or send us a WhatsApp message. We'll schedule a complimentary 30-minute discovery call within 24 hours to discuss your project.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ CONTACT ═════════════════════════════ -->
+<section class="section-wrap contact-wrap" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- Left Info -->
+      <div class="contact-info reveal">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title" style="text-align:left;font-size:clamp(32px,4vw,52px);">Let's Create<br>Something <em>Remarkable</em></h2>
+        <div class="gold-rule" style="margin:20px 0 28px 0;"></div>
+        <p>Whether you're planning a full home renovation, a new office space, or just need expert advice — we'd love to hear from you. Book your free consultation today.</p>
+
+        <div class="cinfo-list">
+          <div class="cinfo-item">
+            <div class="cinfo-icon">📍</div>
+            <div class="cinfo-body">
+              <strong>Our Studio</strong>
+              <span>DLF Square, 110, Golf Course Road<br>Gurgaon, Haryana – 122002</span>
+            </div>
+          </div>
+          <div class="cinfo-item">
+            <div class="cinfo-icon">📞</div>
+            <div class="cinfo-body">
+              <strong>Call Us</strong>
+              <span><a href="tel:+919876543210">+91 98765 43210</a> (Design Enquiries)</span>
+              <span><a href="tel:+911124567890">+91 11 2456 7890</a> (Studio Line)</span>
+            </div>
+          </div>
+          <div class="cinfo-item">
+            <div class="cinfo-icon">✉️</div>
+            <div class="cinfo-body">
+              <strong>Email Us</strong>
+              <span><a href="mailto:hello@urbannestinteriors.com">hello@urbannestinteriors.com</a></span>
+              <span><a href="mailto:projects@urbannestinteriors.com">projects@urbannestinteriors.com</a></span>
+            </div>
+          </div>
+          <div class="cinfo-item">
+            <div class="cinfo-icon">🕐</div>
+            <div class="cinfo-body">
+              <strong>Studio Hours</strong>
+              <span>Mon – Sat: 10:00 AM – 7:00 PM</span>
+              <span>Sunday: 12:00 PM – 5:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://wa.me/919876543210?text=Hi%20UrbanNest!%20I'd%20like%20to%20discuss%20an%20interior%20design%20project." target="_blank" class="wa-box">
+          <div class="wa-ic">💬</div>
+          <div class="wa-txt">
+            <strong>Chat on WhatsApp</strong>
+            <span>Quick responses · Available daily</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Right Form -->
+      <div class="cform reveal">
+        <h3>Request a Free Consultation</h3>
+        <p class="cform-sub">We'll get back to you within 24 hours.</p>
+        <div class="form-success" id="formSuccess">
+          🎉 Thank you! Your enquiry has been sent. We'll reach out within 24 hours.
+        </div>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name *</label>
+              <input type="text" id="fname" name="fname" placeholder="Riya" required>
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name *</label>
+              <input type="text" id="lname" name="lname" placeholder="Sharma" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="riya@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
+          </div>
+          <div class="form-group">
+            <label for="service">Service Required</label>
+            <select id="service" name="service">
+              <option value="">Select a service…</option>
+              <option>Residential Interior Design</option>
+              <option>Commercial Interior Design</option>
+              <option>Modular Kitchen Design</option>
+              <option>Space Planning</option>
+              <option>Renovation &amp; Remodeling</option>
+              <option>Turnkey Interior Solutions</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="budget">Approximate Budget</label>
+            <select id="budget" name="budget">
+              <option value="">Select budget range…</option>
+              <option>Below ₹10 Lakh</option>
+              <option>₹10 – ₹25 Lakh</option>
+              <option>₹25 – ₹50 Lakh</option>
+              <option>₹50 Lakh – ₹1 Crore</option>
+              <option>Above ₹1 Crore</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell Us About Your Project</label>
+            <textarea id="message" name="message" placeholder="Describe your space, vision, timeline..."></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send My Enquiry →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ FOOTER ══════════════════════════════ -->
+<footer>
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <span class="logo-main">UrbanNest</span>
+          <span class="logo-tagline">Interiors &amp; Design</span>
+          <p>Delhi NCR's premier luxury interior design studio — crafting timeless, bespoke spaces since 2009.</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener" title="Instagram">📷</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" title="Facebook">📘</a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener" title="Pinterest">📌</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" title="YouTube">▶️</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" title="LinkedIn">💼</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#process">Our Process</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Residential Design</a></li>
+            <li><a href="#services">Commercial Design</a></li>
+            <li><a href="#services">Modular Kitchens</a></li>
+            <li><a href="#services">Space Planning</a></li>
+            <li><a href="#services">Renovation</a></li>
+            <li><a href="#services">Turnkey Solutions</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+919876543210">📞 +91 98765 43210</a></li>
+            <li><a href="mailto:hello@urbannestinteriors.com">✉️ hello@urbannestinteriors.com</a></li>
+            <li><a href="#contact">📍 DLF Square, Gurgaon</a></li>
+            <li><a href="https://wa.me/919876543210" target="_blank">💬 WhatsApp Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2024 <strong>UrbanNest Interiors</strong>. All rights reserved. · Premium Interior Design Studio, Delhi NCR, India</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════ WHATSAPP FAB ════════════════════════ -->
+<a href="https://wa.me/919876543210?text=Hi%20UrbanNest!%20I%20found%20you%20online%20and%20would%20love%20to%20discuss%20my%20interior%20design%20project." target="_blank" class="wa-fab" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 .5C7.44.5.5 7.44.5 16c0 2.72.7 5.38 2.05 7.74L.5 31.5l8.02-2.1A15.42 15.42 0 0016 31.5c8.56 0 15.5-6.94 15.5-15.5S24.56.5 16 .5zm0 28.3a12.7 12.7 0 01-6.6-1.85l-.47-.28-4.76 1.25 1.27-4.65-.3-.49A12.72 12.72 0 1116 28.8zm6.98-9.52c-.38-.19-2.26-1.12-2.61-1.24-.35-.13-.61-.19-.86.19-.25.38-1 1.24-1.22 1.5-.22.26-.45.29-.83.1-.38-.2-1.62-.6-3.09-1.92a11.58 11.58 0 01-2.14-2.68c-.22-.38-.02-.59.17-.78.17-.17.38-.45.57-.67.19-.22.25-.38.38-.64.13-.25.06-.48-.03-.67-.1-.19-.86-2.08-1.18-2.85-.31-.74-.63-.64-.86-.65l-.74-.01a1.42 1.42 0 00-1.03.49c-.35.38-1.35 1.32-1.35 3.22s1.38 3.73 1.57 3.99c.19.25 2.72 4.17 6.6 5.84.92.4 1.64.64 2.2.82.92.29 1.76.25 2.42.15.74-.11 2.26-.92 2.58-1.82.32-.9.32-1.66.22-1.82-.09-.16-.35-.26-.73-.45z"/>
+  </svg>
+</a>
+
+<!-- ══════════════════════════════ SCRIPTS ═════════════════════════════ -->
+<script>
+(function() {
+  // ── Navbar scroll state ───────────────────────────
+  var navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', function() {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // ── Hamburger menu ────────────────────────────────
+  var hamburger  = document.getElementById('hamburger');
+  var navLinks   = document.getElementById('navLinks');
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+
+  // Close mobile menu on link click
+  navLinks.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
+    });
+  });
+
+  // ── Smooth scroll ─────────────────────────────────
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        var offset = parseInt(getComputedStyle(document.documentElement)
+          .getPropertyValue('--nav-h')) || 80;
+        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // ── Scroll reveal ─────────────────────────────────
+  var revealEls = document.querySelectorAll('.reveal');
+  var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  revealEls.forEach(function(el) { revealObserver.observe(el); });
+
+  // ── Portfolio filter ──────────────────────────────
+  var filterBtns = document.querySelectorAll('.pf-btn');
+  var portItems  = document.querySelectorAll('.port-item');
+
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      filterBtns.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      var filter = this.getAttribute('data-filter');
+
+      portItems.forEach(function(item) {
+        var cat = item.getAttribute('data-cat');
+        if (filter === 'all' || cat === filter) {
+          item.style.display = '';
+          item.style.opacity = '1';
+          item.style.transform = 'scale(1)';
+        } else {
+          item.style.opacity = '0';
+          item.style.transform = 'scale(0.95)';
+          setTimeout(function() {
+            if (item.getAttribute('data-cat') !== filter && filter !== 'all') {
+              item.style.display = 'none';
+            }
+          }, 350);
+        }
+      });
+    });
+  });
+
+  // ── FAQ accordion ─────────────────────────────────
+  document.querySelectorAll('.faq-item').forEach(function(item) {
+    item.querySelector('.faq-q').addEventListener('click', function() {
+      var isOpen = item.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+      // Toggle clicked
+      if (!isOpen) { item.classList.add('open'); }
+    });
+  });
+
+  // ── Contact form ──────────────────────────────────
+  var form    = document.getElementById('contactForm');
+  var success = document.getElementById('formSuccess');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var fname = document.getElementById('fname').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var phone = document.getElementById('phone').value.trim();
+
+    if (!fname || !email || !phone) {
+      alert('Please fill in all required fields (Name, Email, Phone).');
+      return;
+    }
+    // Basic email check
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    success.classList.add('show');
+    form.reset();
+
+    setTimeout(function() { success.classList.remove('show'); }, 6000);
+  });
+
+  // ── Animate stat numbers ──────────────────────────
+  function animateCount(el, target, suffix) {
+    var start = 0;
+    var duration = 1800;
+    var step = target / (duration / 16);
+    var timer = setInterval(function() {
+      start = Math.min(start + step, target);
+      el.textContent = Math.floor(start) + suffix;
+      if (start >= target) clearInterval(timer);
+    }, 16);
+  }
+
+  var statsObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var nums = entry.target.querySelectorAll('.stat-n');
+        nums.forEach(function(n) {
+          var raw  = n.textContent;
+          var num  = parseInt(raw);
+          var suf  = raw.replace(/[0-9]/g, '');
+          n.textContent = '0' + suf;
+          animateCount(n, num, suf);
+        });
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  var statsRows = document.querySelectorAll('.stats-row');
+  statsRows.forEach(function(r) { statsObserver.observe(r); });
+
+})();
+</script>
+</body>
+</html>
